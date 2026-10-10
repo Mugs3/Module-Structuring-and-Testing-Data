@@ -27,7 +27,7 @@ test("can correctly convert 30 minutes before 12:00", function () {
 });
 
 test("can correctly convert time at the beginning of noon", function () {
-  assert.equal(formatAs12HourClock("12:001"), "12:01 pm");
+  assert.equal(formatAs12HourClock("12:01"), "12:01 pm");
 });
 
 test("can correctly convert half hour before midnight", function () {
@@ -36,4 +36,16 @@ test("can correctly convert half hour before midnight", function () {
 
 test("can correctly convert 1 minute before midnight", function () {
   assert.equal(formatAs12HourClock("23:59"), "11:59 pm");
+});
+
+test("can correctly convert half past midnight", function () {
+  assert.equal(formatAs12HourClock("00:30"), "12:30 am");
+});
+
+test("can correctly convert 1 minute before midday", function () {
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am");
+});
+
+test("can correctly convert 1 hour after midday", function () {
+  assert.equal(formatAs12HourClock("13:00"), "01:00 pm");
 });
