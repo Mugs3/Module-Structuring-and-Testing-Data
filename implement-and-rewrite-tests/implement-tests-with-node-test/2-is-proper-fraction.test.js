@@ -10,3 +10,23 @@ test("Basic proper fraction", () => {
   // Example: 1/2 is a proper fraction
   assert.equal(isProperFraction(1, 2), true);
 });
+
+test("Basic proper fraction", () => {
+  assert.equal(isProperFraction(1, 2), true);
+})
+
+test("Basic proper fraction", () => {
+  assert.equal(isProperFraction(2, 2), false);
+})
+
+test("Basic proper fraction", () => {
+  assert.equal(isProperFraction(3, 2), false);
+})
+
+test("Basic proper fraction", () => {
+  assert.equal(isProperFraction(0, 0), false);
+})
+
+test("Basic proper fraction", () => {
+  assert.equal(isProperFraction(-1, 1), true);
+})
