@@ -18,7 +18,7 @@ test(`should return false when denominator is 2`, () => {
 });
 
 // Special case: numerator is negative number
-test(`should return true when denominator is 1`, () => {
+test(`should return false when the negative numerator's magnitude equals the denominator)`, () => {
   expect(isProperFraction(-1, 1)).toEqual(false);
 });
 
